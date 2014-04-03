@@ -4,18 +4,8 @@
 var mongodb    = require('mongodb')
   , mongo      = mongodb.MongoClient
   , fs         = require('fs')
-  , readStream = fs.createReadStream('../data/small.txt')
+  , readStream = fs.createReadStream('../data/shapes.txt')
   , collection;
-
-var obj = {
-  _id : mongodb.ObjectID(),
-    type : "FeatureCollection",
-    features : [],
-    properties : {
-      city : 'Boston',
-      last_updated : +new Date()
-    }
-};
 
 // Add FeatureCollection to mongo
 mongo.connect('mongodb://127.0.0.1:27017/bussurfer', function(err, db){
@@ -26,17 +16,10 @@ mongo.connect('mongodb://127.0.0.1:27017/bussurfer', function(err, db){
   // Begin parse!
   collection = db.collection('shapes');
 
-
-  collection.insert(obj, parse);
+  parse();
 });
 
 function parse(err, result){
-
-  var query = { '_id' : obj._id };
-
-  collection.find(query).toArray(function(err, results){
-    console.log(results);
-  });
 
   if (err){
     console.log("Couldn't create FeatureCollection in Mongo.");
@@ -46,21 +29,22 @@ function parse(err, result){
   var last = false,
       feature = {};
 
-  readLines(readStream, function(line){
+  readLines(readStream, function(line, exit){
     var arr = line.split(',').map(strip)
       , id  = parseInt(arr[0], 10);
 
     // Skip if ID can't be coerced to int
-    if (isNaN(id)){
+    if (isNaN(id) && !exit){
       return;
     }
 
     // Append new feature upon ID change
-    if (id !== last){
+    if (id !== last || exit){
 
-      collection.update(query, { $push : { features : feature }}, function(err, result){
-        console.log(err, result);
-      });
+      if (last){
+        collection.insert(feature, function(err, result){
+        });
+      }
 
       feature = {
         type : "Feature",
@@ -101,9 +85,7 @@ function readLines(input, func) {
   });
 
   input.on('end', function() {
-    if (remaining.length > 0) {
-      func(remaining);
-    }
+    func(remaining, true);
     process.exit(0);
   });
 
