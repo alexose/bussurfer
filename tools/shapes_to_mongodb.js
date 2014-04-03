@@ -29,6 +29,7 @@ function parse(err, result){
   var last = false,
       feature = {};
 
+  console.log('Importing shapes...');
   readLines(readStream, function(line, exit){
     var arr = line.split(',').map(strip)
       , id  = parseInt(arr[0], 10);
@@ -59,7 +60,10 @@ function parse(err, result){
     }
 
     // Append coordinate pair
-    feature.geometry.coordinates.push([arr[1], arr[2]]);
+    var lon = parseFloat(arr[2], 10)
+      , lat = parseFloat(arr[1], 10);
+
+    feature.geometry.coordinates.push([lon, lat]);
 
     last = id;
   });
@@ -86,7 +90,15 @@ function readLines(input, func) {
 
   input.on('end', function() {
     func(remaining, true);
-    process.exit(0);
+
+    console.log('Ensuring 2dsphere index...');
+    collection.ensureIndex({ geometry : '2dsphere' }, function(err, result){
+      if (err){
+        console.log(err);
+      }
+
+      process.exit(0);
+    });
   });
 
 }
