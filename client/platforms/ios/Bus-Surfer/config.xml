@@ -25,6 +25,9 @@
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <name>Bus-Surfer</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -34,4 +37,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon src="res/icons/" />
 </widget>
