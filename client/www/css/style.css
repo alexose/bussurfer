@@ -7,7 +7,8 @@ html, body {
     width: 100%;
 }
 
-body {
+body.surfer {
+    background: #b31c0b;
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
     -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
@@ -18,13 +19,19 @@ body {
     padding:0px;
 }
 
-body div.main{
+body.surfer div.main{
     border-radius: 10px;
     border: 3px solid #b31c0b;
+    background: #fff;
     height: 100%;
     text-align: center;
 }
 
-body div.main div.container{
+body.surfer div.main div.container{
     color: #660f06;
+}
+
+body.surfer div.main div.container button.btn{
+    background: #fff;
+    border: 1px solid #b31c0b;
 }
