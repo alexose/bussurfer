@@ -10,6 +10,12 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+
+        // Bind click event to button
+        var button = document.getElementById('mainbutton');
+
+        button.onclick = this.go;
+        button.touchend = this.go;
     },
 
     // deviceready Event Handler
@@ -30,5 +36,18 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+    },
+
+    go : function(e){
+        e.preventDefault();
+        navigator.geolocation.getCurrentPosition(success, error);
+
+        function success(position){
+            alert(position.coords.latitude + ',' + position.coords.longitude);
+        }
+
+        function error(){
+            alert('Couldn\'t get your location.');
+        }
     }
 };
