@@ -34,17 +34,48 @@
             </div>
             <hr />
             <div class="container">
-                <button id="mainbutton" class="btn btn-lg">Take me there</button>
+                <p>
+                    <button id="mainbutton" class="btn btn-lg">Take me there</button>
+                </p>
+                <p>&nbsp;</p>
+                <div id="waiting">
+                    <p>
+                        <img src="img/throbber.gif" alt="Waiting">
+                    </p>
+                </div>
+                <p id="stats" style="display:none">
+                    I'm at (<span id="latitude"></span>, <span id="longitude"></span>), facing <span id="heading"></span>
+                </p>
+                <p id="error" style="display:none">
+                    We're having trouble detecting your location and direction.  Do you have Location Services turned on?
+                </p>
             </div>
             <hr />
             <div class="container">
-                <p>
-                    <span>The newest sensation in transportation.  By Alexander Ose.</span>
-                </p>
+                <p>The newest sensation in transportation.</p>
+                <p>By Alexander Ose.</p>
+            </div>
+
+            <div id="modal" class="modal" style="display:none">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Welcome to Bus Surfer!</h2>
+                        </div>
+                        <div class="modal-body">
+                            <p>Simply face the direction you want to go, and Bus Surfer will tell you how to get there.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-lg" data-dismiss="modal" aria-hidden="true">Ok!</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>

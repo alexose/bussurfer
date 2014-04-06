@@ -1,6 +1,6 @@
 var app = {
 
-    initialize: function() {
+    initialize: function(){
         this.bindEvents();
     },
 
@@ -11,11 +11,8 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
 
-        // Bind click event to button
-        var button = document.getElementById('mainbutton');
-
-        button.onclick = this.go;
-        button.touchend = this.go;
+        $('#modal').modal();
+        $('#mainbutton').click(this.go);
     },
 
     // deviceready Event Handler
@@ -28,26 +25,76 @@ var app = {
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+        // TODO: Some visuals for deviceready event?
 
-        console.log('Received Event: ' + id);
+        // Begin polling for location and bearing
+        this.interval = setInterval(this.locate.bind(this), 5000);
+    },
+
+    locate : function(){
+
+        var self = this;
+
+        var errors = 0;
+
+        var ele = {
+          lat : $('#latitude'),
+          lon : $('#longitude'),
+          heading : $('#heading'),
+          error : $('#error'),
+          stats : $('#stats')
+        };
+
+        // Update coords and heading
+        navigator.geolocation.getCurrentPosition(updatePosition, error);
+        navigator.compass.getCurrentHeading(updateHeading, error);
+
+        function updatePosition(position){
+
+            self.coords = position.coords;
+
+            var lat = self.coords.latitude,
+                lon = self.coords.longitude;
+
+            ele.lat.text(round(lat));
+            ele.lon.text(round(lon));
+
+            show();
+        }
+
+        function updateHeading(heading){
+
+            console.log(heading);
+            self.heading = heading.magneticHeading;
+
+            ele.heading.text(self.heading);
+
+            show();
+        }
+
+        function show(){
+            if (this.coords && this.heading){
+                ele.stats.slideDown();
+                errors = 0;
+            }
+        }
+
+        function error(){
+            errors++;
+
+            if (errors > 3){
+                ele.error.slideDown();
+            }
+        }
+
+        function round(number){
+          return number.toFixed(3);
+        }
+
     },
 
     go : function(e){
         e.preventDefault();
-        navigator.geolocation.getCurrentPosition(success, error);
-
-        function success(position){
-            alert(position.coords.latitude + ',' + position.coords.longitude);
-        }
-
-        function error(){
-            alert('Couldn\'t get your location.');
-        }
     }
 };

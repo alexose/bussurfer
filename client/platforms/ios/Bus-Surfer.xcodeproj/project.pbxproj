@@ -41,6 +41,7 @@
 		94644D66197644908897841E /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = B93C6A33F4E14562ABC57A58 /* CDVDevice.m */; };
 		5572EDD909B74BFDAA8098BD /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B131E318AAC40AAB0C5CF66 /* CDVLogger.m */; };
 		B83D78EF46354E3082177AFE /* CDVLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F03460C6484D7699F92181 /* CDVLocation.m */; };
+		F941E6C05C0D44B395A2B848 /* CDVCompass.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB136166949424A850B22E8 /* CDVCompass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		ED10305CADD64BC3BB3B1DCD /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		72F03460C6484D7699F92181 /* CDVLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLocation.m"; path = "org.apache.cordova.geolocation/CDVLocation.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		344377074CB0445E806A31A7 /* CDVLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLocation.h"; path = "org.apache.cordova.geolocation/CDVLocation.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		CAB136166949424A850B22E8 /* CDVCompass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVCompass.m"; path = "org.apache.cordova.device-orientation/CDVCompass.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		FA231DF07B84405C999C007A /* CDVCompass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVCompass.h"; path = "org.apache.cordova.device-orientation/CDVCompass.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +240,8 @@
 				ED10305CADD64BC3BB3B1DCD /* CDVLogger.h */,
 				72F03460C6484D7699F92181 /* CDVLocation.m */,
 				344377074CB0445E806A31A7 /* CDVLocation.h */,
+				CAB136166949424A850B22E8 /* CDVCompass.m */,
+				FA231DF07B84405C999C007A /* CDVCompass.h */,
 			);
 			name = Plugins;
 			path = "Bus-Surfer/Plugins";
@@ -434,6 +439,7 @@
 				94644D66197644908897841E /* CDVDevice.m in Sources */,
 				5572EDD909B74BFDAA8098BD /* CDVLogger.m in Sources */,
 				B83D78EF46354E3082177AFE /* CDVLocation.m in Sources */,
+				F941E6C05C0D44B395A2B848 /* CDVCompass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
