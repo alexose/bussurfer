@@ -54,7 +54,7 @@ body.surfer div#main div.container button.btn{
 }
 
 body.surfer div.navbar-default{
-    padding-top: 10px;
+    margin-top: 10px;
     font-size: 24px;
     background: #b31c0b;
 }
