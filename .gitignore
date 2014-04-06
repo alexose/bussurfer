@@ -2,3 +2,4 @@ data/
 node_modules/
 client/platforms/ios/build
 client/www/bower_components
+platforms/ios/www/bower_components

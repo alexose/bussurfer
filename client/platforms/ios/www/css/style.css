@@ -15,41 +15,67 @@ body.surfer {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
-    margin: 0;
     padding:0;
+    text-align: center;
+    position: relative;
 }
 
-body.surfer div.main{
+body.surfer #footer {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+body.surfer div#main{
+    background: #fff;
     border-radius: 10px;
     border: 3px solid #b31c0b;
-    background: #fff;
     height: 100%;
-    text-align: center;
 }
 
 body.surfer div.modal-content{
-    transform: translate(0, 50%) !important;
-    -ms-transform: translate(0, 50%) !important; /* IE 9 */
-    -webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+  margin-top: 30%;
 }
 
 body.surfer hr{
     border: 0;
 }
 
-body.surfer div.main div.container{
+body.surfer div#main div.container{
     color: #660f06;
 }
 
-body.surfer div.main div.container button.btn{
+body.surfer div#main div.container button.btn{
     background: #fff;
     border: 1px solid #b31c0b;
 }
 
 body.surfer div.navbar-default{
+    padding-top: 10px;
+    font-size: 24px;
     background: #b31c0b;
+}
+
+body.surfer div.navbar-default .active a,
+body.surfer div.navbar-default a:hover,
+body.surfer div.navbar-default a:active,
+body.surfer div.navbar-default a:focus {
+    background: none !important;
+    color: rgba(255,255,255,0.7) !important;
 }
 
 body.surfer div.navbar-default a{
     color: #fff;
+}
+
+body.surfer #map{
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+body.surfer #map .leaflet-control-container{
+    visibility: hidden;
 }

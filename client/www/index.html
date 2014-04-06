@@ -7,22 +7,23 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
-        <title>Hello World</title>
+        <link rel="stylesheet" type="text/css" href="bower_components/mapbox.js/dist/mapbox.css" />
+        <title>Bus Surfer</title>
     </head>
     <body class="surfer">
-        <div id="wrap">
-            <div class="main">
+        <div id="main">
 
-                <div class="navbar navbar-default navbar-static-top" role="navigation">
-                    <div class="container">
-                          <ul id="nav" class="nav navbar-nav">
-                              <li class="pull-left"><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
-                              <li class="pull-left"><a href="#"><span class="glyphicon glyphicon-globe"></span></a></li>
-                              <li class="pull-right"><a href="#"><span class="glyphicon glyphicon-cog"></span></a></li>
-                          </ul>
-                    </div>
+            <div class="navbar navbar-default navbar-static-top" role="navigation">
+                <div class="container">
+                      <ul id="nav" class="nav navbar-nav">
+                          <li class="pull-left"><a href="#" data-target="home"><span class="glyphicon glyphicon-home"></span></a></li>
+                          <li class="pull-left"><a href="#" data-target="map"><span class="glyphicon glyphicon-globe"></span></a></li>
+                          <li class="pull-right"><a href="#" data-target="config"><span class="glyphicon glyphicon-cog"></span></a></li>
+                      </ul>
                 </div>
+            </div>
 
+            <div id="home">
                 <div class="container">
                     <h1>Bus Surfer</h1>
                 </div>
@@ -44,34 +45,68 @@
                         We're having trouble detecting your location and direction.  Do you have Location Services turned on?
                     </p>
                 </div>
-
-                <div id="modal" class="modal" style="display:none">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-body">
-                                <h2>Welcome!</h2>
-                                <p>&nbsp;</p>
-                                <p>Simply face the direction you want to go, press the button, and Bus Surfer will tell you how to get there.</p>
-                                <p>&nbsp;</p>
-                                <button class="btn btn-lg" data-dismiss="modal" aria-hidden="true">Ok!</button>
-                            </div>
-                        </div>
+                <div id="footer">
+                    <div class="container">
+                        <p>The newest sensation in transportation.</p>
+                        <p>By Alexander Ose.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="footer">
-            <div class="container">
-                <p>The newest sensation in transportation.</p>
-                <p>By Alexander Ose.</p>
+            <div id="map" style="visibility: hidden"></div>
+            <div id="config" style="display: none">
+                <p>Coming soon!</p>
+            </div>
+
+            <div id="modal" class="modal" style="display:none">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h2>Welcome!</h2>
+                            <p>&nbsp;</p>
+                            <p>Simply face the direction you want to go, press the button, and Bus Surfer will tell you how to get there.</p>
+                            <p>&nbsp;</p>
+                            <button class="btn btn-lg" data-dismiss="modal" aria-hidden="true">Ok!</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/mapbox.js/dist/mapbox.js"></script>
         <script type="text/javascript">
+
             app.initialize();
+
+            // Navbar behavior
+            var nav = $('#nav'),
+                content = $('#home, #map, #config');
+
+            nav.find('a').click(function(e){
+
+                var target = $(this).data('target');
+
+                content.hide();
+                $('#' + target).show();
+
+                // This is all a bit ugly, but mapbox needs a container of a specific size in order to initialize properly.
+                if (target == 'map'){
+                    $('#map').css('visibility', 'visible');
+                }
+
+                nav.find('li').removeClass('active');
+                $(this).parent().addClass('active');
+            });
+
+            // Initalize map
+            L.map('map')
+                .setView([42.37, -71.09], 11)
+                .addLayer(L.mapbox.tileLayer('examples.map-9ijuk24y', {
+                    detectRetina: true
+                }));
+
         </script>
     </body>
 </html>
