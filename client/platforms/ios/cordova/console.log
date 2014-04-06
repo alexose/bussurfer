@@ -222,3 +222,4 @@ Terminating in response to SpringBoard's termination.
 2014-04-05 22:07:10.253 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '13.896973' ms. Plugin should use a background thread.
 2014-04-05 22:07:21.020 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '16.340088' ms. Plugin should use a background thread.
 2014-04-05 23:10:11.677 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '22.210938' ms. Plugin should use a background thread.
+2014-04-06 09:43:18.924 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '15.631104' ms. Plugin should use a background thread.

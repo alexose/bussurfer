@@ -17,14 +17,26 @@ body.surfer {
     height:100%;
     margin: 0;
     padding:0;
+    text-align: center;
 }
 
+body.surfer #wrap {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+  background: #fff;
+  border-radius: 10px;
+  border: 3px solid #b31c0b;
+}
+
+body.surfer #footer {
+    height: 60px;
+}
+
+
 body.surfer div.main{
-    border-radius: 10px;
-    border: 3px solid #b31c0b;
     background: #fff;
-    height: 100%;
-    text-align: center;
 }
 
 body.surfer div.modal-content{
