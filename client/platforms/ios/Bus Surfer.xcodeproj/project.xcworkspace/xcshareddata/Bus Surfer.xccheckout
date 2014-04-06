@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3F1D679D-E94E-4C1A-9851-0738B865BB10</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bus Surfer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FD153A37-468F-42DC-8EDC-E40897FEC7D8</key>
+		<string>ssh://github.com/alexose/bussurfer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>client/platforms/ios/Bus Surfer.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FD153A37-468F-42DC-8EDC-E40897FEC7D8</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/alexose/bussurfer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FD153A37-468F-42DC-8EDC-E40897FEC7D8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FD153A37-468F-42DC-8EDC-E40897FEC7D8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>bussurfer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
