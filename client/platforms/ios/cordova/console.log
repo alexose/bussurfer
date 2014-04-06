@@ -199,3 +199,26 @@ Terminating in response to SpringBoard's termination.
 2014-04-05 10:57:29.426 Bus-Surfer[17815:70b] Unlimited access to network resources
 2014-04-05 10:57:29.582 Bus-Surfer[17815:70b] Resetting plugins due to page load.
 2014-04-05 10:57:29.675 Bus-Surfer[17815:70b] Finished load of: file:///Users/alexose/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2E98DE63-5851-414A-BAD6-7ADF3DB21DE3/Bus-Surfer.app/www/index.html
+2014-04-05 21:37:05.078 Bus-Surfer[19633:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-05 21:37:05.124 Bus-Surfer[19633:70b] Unlimited access to network resources
+2014-04-05 21:37:05.663 Bus-Surfer[19633:70b] Resetting plugins due to page load.
+2014-04-05 21:37:05.917 Bus-Surfer[19633:70b] Finished load of: file:///Users/alexose/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2E98DE63-5851-414A-BAD6-7ADF3DB21DE3/Bus-Surfer.app/www/index.html
+2014-04-05 21:40:20.641 Bus-Surfer[19988:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-05 21:40:20.654 Bus-Surfer[19988:70b] Unlimited access to network resources
+2014-04-05 21:40:20.777 Bus-Surfer[19988:70b] Resetting plugins due to page load.
+2014-04-05 21:40:21.041 Bus-Surfer[19988:70b] Finished load of: file:///Users/alexose/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2E98DE63-5851-414A-BAD6-7ADF3DB21DE3/Bus-Surfer.app/www/index.html
+2014-04-05 21:41:02.106 Bus-Surfer[20307:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-05 21:41:02.119 Bus-Surfer[20307:70b] Unlimited access to network resources
+2014-04-05 21:41:02.230 Bus-Surfer[20307:70b] Resetting plugins due to page load.
+2014-04-05 21:41:02.400 Bus-Surfer[20307:70b] Finished load of: file:///Users/alexose/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2E98DE63-5851-414A-BAD6-7ADF3DB21DE3/Bus-Surfer.app/www/index.html
+2014-04-05 21:42:42.604 Bus-Surfer[20630:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-05 21:42:42.613 Bus-Surfer[20630:70b] Unlimited access to network resources
+2014-04-05 21:42:42.686 Bus-Surfer[20630:70b] Resetting plugins due to page load.
+2014-04-05 21:42:42.799 Bus-Surfer[20630:70b] Finished load of: file:///Users/alexose/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2E98DE63-5851-414A-BAD6-7ADF3DB21DE3/Bus-Surfer.app/www/index.html
+2014-04-05 22:07:04.782 Bus-Surfer[21009:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-05 22:07:04.798 Bus-Surfer[21009:70b] Unlimited access to network resources
+2014-04-05 22:07:04.937 Bus-Surfer[21009:70b] Resetting plugins due to page load.
+2014-04-05 22:07:05.185 Bus-Surfer[21009:70b] Finished load of: file:///Users/alexose/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/2E98DE63-5851-414A-BAD6-7ADF3DB21DE3/Bus-Surfer.app/www/index.html
+2014-04-05 22:07:10.253 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '13.896973' ms. Plugin should use a background thread.
+2014-04-05 22:07:21.020 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '16.340088' ms. Plugin should use a background thread.
+2014-04-05 23:10:11.677 Bus-Surfer[21009:70b] THREAD WARNING: ['Geolocation'] took '22.210938' ms. Plugin should use a background thread.

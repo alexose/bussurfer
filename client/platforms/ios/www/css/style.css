@@ -15,8 +15,8 @@ body.surfer {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
-    margin:0px;
-    padding:0px;
+    margin: 0;
+    padding:0;
 }
 
 body.surfer div.main{
@@ -27,7 +27,13 @@ body.surfer div.main{
     text-align: center;
 }
 
-body.surfer div.main hr{
+body.surfer div.modal-content{
+    transform: translate(0, 50%) !important;
+    -ms-transform: translate(0, 50%) !important; /* IE 9 */
+    -webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+}
+
+body.surfer hr{
     border: 0;
 }
 
@@ -38,4 +44,12 @@ body.surfer div.main div.container{
 body.surfer div.main div.container button.btn{
     background: #fff;
     border: 1px solid #b31c0b;
+}
+
+body.surfer div.navbar-default{
+    background: #b31c0b;
+}
+
+body.surfer div.navbar-default a{
+    color: #fff;
 }
