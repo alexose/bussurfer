@@ -15,7 +15,7 @@ body.surfer {
     font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:12px;
     height:100%;
-    padding:0;
+    padding:20px 0 0 0;
     text-align: center;
     position: relative;
 }
@@ -54,7 +54,6 @@ body.surfer div#main div.container button.btn{
 }
 
 body.surfer div.navbar-default{
-    margin-top: 10px;
     font-size: 24px;
     background: #b31c0b;
 }
